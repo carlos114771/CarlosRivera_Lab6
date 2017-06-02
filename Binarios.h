@@ -2,6 +2,7 @@
 #define BINARIOS_H
 #include <iostream>
 #include <vector>
+using namespace std;
 class Binarios{
 	private:
 		int* arreglo;
@@ -12,12 +13,13 @@ class Binarios{
 		Binarios(int*);
 
 		int* getArreglo(int);
-
-		Binarios operator+(Binarios*);
-		Binarios operator-(Binarios*);
-		Binarios operator*(Binarios*);
-		Binarios operator/(Binarios*);
-		Binarios operator^(Binarios*);
+	//	void llenarArreglo();
+		void* setArreglo();
+		Binarios* operator+(Binarios*);
+		Binarios* operator-(Binarios*);
+		Binarios* operator*(Binarios*);
+		Binarios* operator/(Binarios*);
+		Binarios* operator^(Binarios*);
 
 		~Binarios();
 

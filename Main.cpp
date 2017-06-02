@@ -1,80 +1,75 @@
 #include "Binarios.h"
 #include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctime>
+
+
 
 using namespace std;
 
 int menu();
 
-
 int main(){
 	bool salir=false;
 	int opcion;
 	//int* pro;
-	Binarios* bin = new Binarios();
+	//Binarios* bin = new Binarios();
 	while(!salir){
-		if(opcion==1){
-			for(int i=0; i<4;i++){
-				cout<<"el arreglo es: "<<bin->getArreglo()<<endl;
-			}
-			
-		}
-		if(opcion==2){
-			bool saliroperacion=false;
-			while(!saliroperacion){
-				cout<<"Menu de operaciones "<<endl
-					<<"1 Disyuncion "<<endl
-					<<"2 Conjuncion "<<endl
-					<<"3 Implicacion "<<endl
-					<<"4 Doble Implicacion "<<endl
-					<<"5 Disyuncion Exclusiva "<<endl
-					<<"6 Salir "<<endl;
-				int subopcion;
-				cout<<"Ingrese una opcion: "<<endl;
-				cin>>subopcion;
-				if(subopcion==1){
-
-				}
-				if(subopcion==2){
-					
-				}
-				if(subopcion==3){
-					
-				}
-				if(subopcion==4){
-					
-				}
-				if(subopcion==5){
-					
-				} 
-				if(subopcion==6){
-					saliroperacion=true;
-				}
-
-			}
-
-		}
-		if(opcion==3){
-			salir=true;
-		}
-		/*switch(menu()){
+		switch(menu()){
 			case 1:{
-				//int temp=0;
-				//cout<<temp.getArreglo();
+				int tamano = 4, numero = 2;
+				int arreglo[tamano] = {0};
+				srand(time(NULL));
+				for (int i = 0; i < tamano; ++i ){
+					arreglo[i] = rand() % numero;
+				}
+				cout << "Los valores del arreglo son: " << endl;
+				for (int i = 0; i < tamano; ++i ) {
+					cout <<"arreglo[" << i << "] = " << arreglo[i] << endl;
+				}
+				break;
+			}
+			case 2: {
+				bool saliroperacion=false;
+				while(!saliroperacion){
+					cout<<"Menu de operaciones "<<endl
+						<<"1 Disyuncion "<<endl
+						<<"2 Conjuncion "<<endl
+						<<"3 Implicacion "<<endl
+						<<"4 Doble Implicacion "<<endl
+						<<"5 Disyuncion Exclusiva "<<endl
+						<<"6 Salir "<<endl;
+					int subopcion;
+					cout<<"Ingrese una opcion: "<<endl;
+					cin>>subopcion;
+					if(subopcion==1){
+						
+					}
+					if(subopcion==2){
 
-				cout<<"el arreglo es: "<<bin->getArreglo()<<endl;
+					}
+					if(subopcion==3){
+
+					}
+					if(subopcion==4){
+					
+					}
+					if(subopcion==5){
+					
+					} 
+					if(subopcion==6){
+						saliroperacion=true;
+					}
+				}
 				break;
 			}
-			case 2:{
-				break;
-			}
-			case 3:{
+			case 3: {
 				salir=true;
 				break;
 			}
-		}*/
+		}
 	}
-
-
 	return 0;
 }
 
