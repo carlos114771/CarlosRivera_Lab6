@@ -12,9 +12,9 @@ class Binarios{
 		Binarios();
 		Binarios(int*);
 
-		int* getArreglo(int);
+		int* getArreglo();
 	//	void llenarArreglo();
-		void* setArreglo();
+		void setArreglo(int*);
 		Binarios* operator+(Binarios*);
 		Binarios* operator-(Binarios*);
 		Binarios* operator*(Binarios*);
